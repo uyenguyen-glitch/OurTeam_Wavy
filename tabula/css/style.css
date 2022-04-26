@@ -1,0 +1,257 @@
+body {
+  height: 100vh;
+}
+
+header .navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background-color: transparent;
+}
+
+header .navbar .sidenav .navbar-nav {
+  gap: 20px;
+}
+
+header .navbar .sidenav .navbar-nav .contact_icon {
+  list-style: none;
+  align-items: center;
+}
+
+header .navbar .sidenav .navbar-nav .contact_icon .contact {
+  background-color: #b61984;
+  border-radius: 20px;
+  border: 1px solid #b61984;
+  padding: 10px 20px;
+  margin-right: 15px;
+  color: #ffffff !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+header .navbar .sidenav .navbar-nav .contact_icon .contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: scale(0);
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: all 0.3s;
+}
+
+header .navbar .sidenav .navbar-nav .contact_icon .contact:hover {
+  color: #b61984 !important;
+}
+
+header .navbar .sidenav .navbar-nav .contact_icon .contact:hover::before {
+  transform: scale(1);
+}
+
+header .navbar .sidenav .navbar-nav .contact_icon .icon {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+header .navbar .sidenav .navbar-nav .contact_icon .icon:hover {
+  color: #b61984;
+  cursor: pointer;
+}
+
+header .navbar .sidenav .nav-item {
+  position: relative;
+}
+
+header .navbar .sidenav .nav-item .nav-link {
+  display: inline-block;
+  font-size: 14px !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #181818;
+}
+
+header .navbar .sidenav .nav-item .nav-link::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 50%;
+  background-color: #b61984;
+  position: absolute;
+  bottom: -15px;
+  margin-left: 16px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+header .navbar .sidenav .nav-item .nav-link:hover::after {
+  opacity: 1;
+}
+
+header .navbar .sidenav .nav-item .fa {
+  position: absolute;
+  right: 40px;
+  top: 10px;
+}
+
+header .navbar .sidenav .active .nav-link {
+  font-size: 14px !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #181818 !important;
+}
+
+header .navbar .sidenav .active .nav-link:after {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  header .navbar {
+    padding: 0 0 0 20px;
+    height: 100%;
+    display: inline-block;
+  }
+  header .navbar .sidenav {
+    overflow-x: hidden;
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: all 0.5s;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  header .navbar .sidenav .navbar-nav {
+    gap: 0;
+    margin-top: 40px;
+  }
+  header .navbar .sidenav .nav-item .nav-link::after {
+    opacity: 0;
+  }
+  header .navbar .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  header .navbar .sidenav .contact_icon {
+    display: block !important;
+    margin-top: 45px;
+  }
+  header .navbar .sidenav .contact_icon .icon {
+    display: inline;
+    padding: 0 !important;
+    color: #000000;
+  }
+  header .navbar .sidenav .contact_icon .contact {
+    font-size: 15px;
+    margin: 0 0 6px 30px !important;
+    width: 70%;
+    text-align: center;
+    padding: 10px !important;
+  }
+  header .navbar .logo_btn {
+    position: relative;
+  }
+  header .navbar .logo_btn .closebtn {
+    position: absolute;
+    width: 54px;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    font-weight: 300;
+    background-color: #ffffff;
+    color: #b61984;
+    text-decoration: none;
+    padding: 0 0 15px 15px;
+    text-align: center;
+    z-index: 2;
+    transition: all 0.5s;
+  }
+  header .navbar .navbar-brand {
+    padding: 0 !important;
+    text-align: center;
+  }
+  header .navbar .navbar-brand #logo-responsive {
+    display: block;
+    padding: 0 110px;
+  }
+  header .navbar #logo-web {
+    width: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  header .navbar #btnOpen {
+    display: none !important;
+  }
+  header .navbar #btnClose {
+    display: none !important;
+  }
+  header .navbar .fa {
+    display: none !important;
+  }
+  header .navbar #logo-responsive {
+    display: none !important;
+  }
+  header .navbar #logo-web {
+    display: inline-block !important;
+  }
+}
+
+header #main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+.about_us {
+  position: relative;
+  background-image: url("./../../images/yellow_top_wave_01.png");
+  background-size: 1500px;
+  background-repeat: no-repeat;
+}
+
+.about_us .row {
+  padding: 100px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about_us .row .content p {
+  font-size: 1.1rem !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #b61984;
+}
+
+.about_us .row .content h1 {
+  font-size: 57px !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #191919;
+}
+
+@media (max-width: 991px) {
+  .about_us {
+    background-size: 600px 150px;
+  }
+  .about_us .container {
+    padding: 120px 30px 120px 30px;
+  }
+  .about_us .container .row {
+    gap: 50px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
